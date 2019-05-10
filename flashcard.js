@@ -36,6 +36,10 @@ class Flashcard {
     cardContainer.classList.add('flashcard-box');
     cardContainer.classList.add('show-word');
 
+    cardContainer.addEventListener('pointerdown', begin);
+    cardContainer.addEventListener('pointermove', drag);
+    cardContainer.addEventListener('pointerup', end);
+
     const wordSide = document.createElement('div');
     wordSide.classList.add('flashcard');
     wordSide.classList.add('word');
